@@ -1,0 +1,21 @@
+<header class="gov-header border-bottom bg-white">
+  <div class="container py-3 d-flex align-items-center justify-content-between gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <img src="/public/img/logo-pemprov.svg" class="brand-logo" alt="Logo Pemerintah Provinsi" />
+      <img src="/public/img/logo-instansi.svg" class="brand-logo" alt="Logo Instansi" />
+      <img src="/public/img/logo-samsat.svg" class="brand-logo" alt="Logo Samsat" />
+
+      <div class="lh-sm">
+        <div class="brand-title"><%= siteName %></div>
+        <div class="brand-subtitle"><%= orgLine %></div>
+      </div>
+    </div>
+
+    <form class="d-none d-lg-flex" method="GET" action="/cari" role="search">
+      <div class="input-group">
+        <input name="q" class="form-control" placeholder="Cari layanan / berita..." aria-label="Pencarian" />
+        <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+      </div>
+    </form>
+  </div>
+</header>

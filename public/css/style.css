@@ -1,0 +1,23 @@
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: white;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  z-index: 9999;
+}
+.skip-link:focus { left: 8px; }
+
+.gov-topbar .navbar .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.hero {
+  background: radial-gradient(circle at 10% 10%, rgba(13,110,253,.10), transparent 50%),
+              radial-gradient(circle at 90% 20%, rgba(25,135,84,.10), transparent 45%),
+              linear-gradient(180deg, #ffffff, #f4f6f9);
+}

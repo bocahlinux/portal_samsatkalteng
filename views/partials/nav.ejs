@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-white sticky-top gov-nav border-bottom">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navMain" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link <%= path==='/'?'active':'' %>" href="/">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link <%= path==='/profil'?'active':'' %>" href="/profil">Profil</a></li>
+        <li class="nav-item"><a class="nav-link <%= path==='/layanan'?'active':'' %>" href="/layanan">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link <%= path.startsWith('/berita')?'active':'' %>" href="/berita">Berita</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle <%= (path==='/ppid'||path==='/unduhan')?'active':'' %>" href="#" role="button" data-bs-toggle="dropdown">
+            Informasi Publik
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/ppid">PPID</a></li>
+            <li><a class="dropdown-item" href="/unduhan">Unduhan</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link <%= path==='/pengaduan'?'active':'' %>" href="/pengaduan">Pengaduan</a></li>
+      </ul>
+
+      <a class="btn btn-outline-primary btn-sm d-lg-none" href="/cari">Pencarian</a>
+    </div>
+  </div>
+</nav>

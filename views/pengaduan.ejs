@@ -1,0 +1,45 @@
+<%- include("partials/head") %>
+<%- include("partials/topbar") %>
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+<%- include("partials/breadcrumbs") %>
+
+<main id="main" class="container py-4">
+  <h1 class="h4 fw-bold mb-1">Pengaduan</h1>
+  <p class="text-secondary">Sampaikan pengaduan/pertanyaan. (Nanti bisa diintegrasikan ke helpdesk/ticketing.)</p>
+
+  <% if (sent) { %>
+    <div class="alert alert-success mt-3">Pengaduan berhasil dikirim (simulasi). Silakan tindak lanjut sesuai SOP.</div>
+  <% } %>
+
+  <div class="card border-0 shadow-sm mt-3">
+    <div class="card-body p-4">
+      <form method="POST" action="/pengaduan">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Nama</label>
+            <input name="nama" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Kontak (HP/Email)</label>
+            <input name="kontak" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label class="form-label">Uraian</label>
+            <textarea name="uraian" rows="4" class="form-control" required></textarea>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-3">
+          <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i> Kirim</button>
+        </div>
+
+        <div class="small text-secondary mt-2">
+          Catatan: pastikan kebijakan privasi + retensi data pengaduan mengikuti aturan instansi.
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<%- include("partials/footer") %>

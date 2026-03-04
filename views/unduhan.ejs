@@ -1,0 +1,37 @@
+<%- include("partials/head") %>
+<%- include("partials/topbar") %>
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+<%- include("partials/breadcrumbs") %>
+
+<main id="main" class="container py-4">
+  <h1 class="h4 fw-bold mb-1">Unduhan</h1>
+  <p class="text-secondary">Dokumen, formulir, dan publikasi layanan.</p>
+
+  <div class="card border-0 shadow-sm mt-3">
+    <div class="table-responsive">
+      <table class="table mb-0 align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Dokumen</th>
+            <th class="text-end">Ukuran</th>
+            <th class="text-end">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% unduhan.forEach(u => { %>
+            <tr>
+              <td><%= u.name %></td>
+              <td class="text-end text-secondary"><%= u.size %></td>
+              <td class="text-end">
+                <a class="btn btn-sm btn-outline-primary" href="<%= u.file %>"><i class="bi bi-download"></i> Unduh</a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include("partials/footer") %>
