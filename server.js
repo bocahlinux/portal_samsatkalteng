@@ -10,7 +10,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 const SITE_NAME = process.env.SITE_NAME || "Portal Samsat Kalimantan Tengah";
-const ORG_LINE = process.env.ORG_LINE || "Pemerintah Provinsi Kalimantan Tengah";
+const ORG_LINE = process.env.ORG_LINE || "Badan Pendapatan Daerah Provinsi Kalimantan Tengah";
 const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
 app.set("trust proxy", 1);
