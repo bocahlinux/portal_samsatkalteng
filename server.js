@@ -203,6 +203,11 @@ app.get("/cari", (req, res) => {
 
 app.get("/health", (req, res) => res.json({ ok: true, name: SITE_NAME, time: new Date().toISOString() }));
 
+// Rute khusus untuk melayani file verifikasi Meta/Facebook
+app.get("/v84tlhlgfv26ch7jflcoa9ekk29pfy.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "v84tlhlgfv26ch7jflcoa9ekk29pfy.html"));
+});
+
 app.use((req, res) => res.status(404).render("404", { pageTitle: "Halaman Tidak Ditemukan", breadcrumbs: [] }));
 
 app.use((err, req, res, next) => {
